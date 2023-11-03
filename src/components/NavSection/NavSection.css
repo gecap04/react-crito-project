@@ -1,0 +1,23 @@
+.nav-section {
+    padding: 10px 0;
+}
+
+.nav-section .container{
+    width: 100%;
+    padding: 0 1rem;
+    margin: 0 auto;
+
+    display: flex;
+}
+
+
+.nav-section .container .menu {
+    display: none;
+    
+}
+
+@media (min-width: 1400px) {
+    .nav-section .container{
+        max-width: 1320px;
+    } 
+}
