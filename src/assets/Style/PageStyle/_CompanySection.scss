@@ -1,0 +1,247 @@
+.company-section{
+    margin-top: 100px;
+    @media (min-width: 768px){
+        margin-top: 230px;
+    }
+
+    .container{
+       display: block;
+
+        @media (min-width: 768px){
+            display: flex;
+            justify-content: space-between;
+        }
+       
+
+        .left-side{
+            display: none;
+            
+            @media (min-width: 768px){
+                display: block;
+
+                img{
+                    display: block;
+                    width: 530px;
+                    height: 620px;
+                    z-index: 0;
+                }
+                .blue-rectangle{
+                    background-color: #BEEBFF;
+                    width: 370px;
+                    height: 180px;
+                    position: relative;
+                    top: -220px;
+                    right: 65px;
+                    z-index: 1;
+
+                    h3{
+                        position: relative;
+                        left: 26px;
+                        top: 40px;
+                        font-family: 'DM Sans', sans-serif;
+                        font-size: 20px;
+                        font-weight: 700;
+                        color: #191919;
+                    } 
+                   
+                    p{
+                        position: relative;
+                        left: 175px;
+                        top: -21px;
+                        font-family: 'DM Sans', sans-serif;
+                        font-weight: 700;
+                        font-size: 16px;
+                        color: #F94D1C;
+                   
+                    
+                    }
+
+                    .founder-info{
+                        position: relative;
+                        left: 24px;
+                        top: 20px;
+                        font-family: 'Inter', sans-serif;
+                        font-size: 16px;
+                        font-weight: 300;
+                        color: #191919;
+                   
+                    }
+
+                
+
+                }
+            }
+
+        }
+        
+
+        .right-side{
+            
+            .title{
+                text-align: center;
+                font-family: 'Inter', sans-serif;
+                font-size: 16px;
+                font-weight: 500;
+                color: #F94D1C;
+
+                @media (min-width: 768px){
+                    font-family: 'Inter', sans-serif;
+                    font-size: 16px;
+                    font-weight: 500;
+                    color: #F94D1C;
+                    text-align: left;
+                }
+            }
+
+            h2{
+                font-family: 'DM Sans', sans-serif;
+                font-size: 35px;
+                font-weight: 700;
+                color: #191919;
+                text-align: center;
+
+                @media (min-width: 768px){
+                    font-family: 'DM Sans', sans-serif;
+                    font-size: 45px;
+                    font-weight: 700;
+                    color: #191919;
+                    width: 450px;
+                    height: 150px;
+                    text-align: left;
+                }
+            }
+
+            .company-info1{
+                margin-top: 20px;
+                font-family: 'Inter', sans-serif;
+                font-size: 16px;
+                font-weight: 300;
+                color: #191919;
+                text-align: center;
+
+                @media (min-width: 768px){
+                    margin-top: 50px;
+                    font-family: 'Inter', sans-serif;
+                    font-size: 16px;
+                    font-weight: 300;
+                    color: #191919;
+                    width: 530px;
+                    text-align: left;
+                }
+            }
+            
+            .company-info2{
+                margin-top: 30px;
+                font-family: 'Inter', sans-serif;
+                font-size: 16px;
+                font-weight: 300;
+                color: #191919;
+                text-align: center;
+
+                @media (min-width: 768px){
+                    margin-top: 50px;
+                    font-family: 'Inter', sans-serif;
+                    font-size: 16px;
+                    font-weight: 300;
+                    color: #191919;
+                    width: 510px;
+                    padding-bottom: 120px;
+                    text-align: left;
+                }
+            }
+
+            .buttons{
+                display: flex;
+                padding-bottom: 20px;
+
+                @media(min-width: 768px){
+                    display: flex; 
+                }
+                
+                .btn-black{
+                    display: flex;
+                        background-color: #191919;
+                        border: 1px solid #191919;
+                        color: #F0EFE9;
+                        text-decoration: none;
+                        padding: 12px 30px;
+                        font-weight: 600;
+                        font-size: 16px; 
+                        border-radius: 25px;
+                        height: 50px;
+                        width: 180px;
+            
+                        i{
+                            margin-left: 8px;
+                            font-size: 0.9em;
+                        }
+            
+                        &:hover{
+                            background-color: #ffffff;
+                            border: 1px solid #191919;
+                            color: #191919;
+                        }
+
+                    @media (min-width: 768px){
+                        background-color: #191919;
+                        border: 1px solid #191919;
+                        color: #F0EFE9;
+                        text-decoration: none;
+                        padding: 12px 30px;
+                        font-weight: 600;
+                        font-size: 16px; 
+                        border-radius: 25px;
+                        height: 50px;
+                        width: 180px;
+            
+                        i{
+                            margin-left: 8px;
+                            font-size: 0.9em;
+                        }
+            
+                        &:hover{
+                            background-color: #ffffff;
+                            border: 1px solid #191919;
+                            color: #191919;
+                        }
+                    }
+            
+                }
+
+                .btn-round{
+                    height: 56px;
+                    width: 56px;
+                    aspect-ratio: 1;
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+                    margin-left: 40px;
+                
+                }
+
+                p{
+                    font-family: 'Inter', sans-serif;
+                    font-size: 16px;
+                    font-weight: 600;
+                    color: #191919;
+                    margin-left: 20px;
+                   
+
+                    @media(min-width: 768px){
+                        font-family: 'Inter', sans-serif;
+                        font-size: 16px;
+                        font-weight: 600;
+                        color: #191919;
+                        margin-left: 20px;
+                        margin-top: 16px;
+                    }
+                    
+                }
+
+             }
+
+        }
+
+    }
+
+}
