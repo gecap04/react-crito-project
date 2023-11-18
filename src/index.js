@@ -7,6 +7,8 @@ import './assets/Style/style.css'
 
 import Home from './views/Home';
 import Contacts from './views/Contacts';
+import News from './views/News';
+import NewsDetails from './views/NewsDetails';
 import NotFound from './views/NotFound';
 import HeaderSection from './components/Header/HeaderSection';
 import FooterSection from './components/Footer/FooterSection';
@@ -24,6 +26,8 @@ root.render(
       <Routes>
         <Route path='/' element={<Home />} />
         <Route path='/contacts' element={<Contacts />} />
+        <Route path='/news' element={<News />} />
+        <Route path='/details' element={<NewsDetails />} />
         <Route path='*' element={<NotFound/>} />
 
       </Routes>

@@ -50,18 +50,36 @@
 
                 }
 
-            }
-        }
-        .center-content{
-            padding-top: 40px;
-            .btn-yellow{
-                display: flex;
-                align-items: center;
-                justify-content: center;
-                width: 80%;
-            
+                .error-message{
+                    text-align: center;
+                    font-family: 'Inter', sans-serif;
+                    font-size: 16px;
+                    font-weight: 500;
+                    color: #F94D1C;
+                }
+                
+                .error{
+                    text-align: center;
+                    font-family: 'Inter', sans-serif;
+                    font-size: 16px;
+                    font-weight: 500;
+                    color: #F94D1C;
+                }
+
+
+                #form-btn{
+                    padding-top: 40px;
+                    display: flex;
+                    align-items: center;
+                    justify-content: center;
+                    width: 80%;
+                    .btn-yellow{
+                       width: 100%;
+                    }
+                }
 
             }
         }
+        
     }
 }
