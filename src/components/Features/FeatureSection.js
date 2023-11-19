@@ -1,8 +1,21 @@
 import React from 'react'
 import SectionTitle from '../../assets/Style/Generics/SectionTitle'
 import Button from '../../assets/Style/Generics/Button'
+import FeatureColumn from '../FeatureColumn'
 
 const FeatureSection = () => {
+
+
+const features = [
+  {position: "part1", icon: "fa-regular fa-handshake", title: "Business Advice", description: "Lorem ipsum, dolor sit amet consectetur adipisicing elit."},
+  {position: "part2", icon: "fa-regular fa-lightbulb-on", title: "Startup Business", description: "Lorem ipsum, dolor sit amet consectetur adipisicing elit."},
+  {position: "part3", icon: "fa-regular fa-chart-mixed", title: "Finacial Advice", description: "Lorem ipsum, dolor sit amet consectetur adipisicing elit."},
+  {position: "part4", icon: "fa-regular fa-cube", title: "Risk Managment", description: "Lorem ipsum, dolor sit amet consectetur adipisicing elit."}
+]
+
+
+
+
   return (
 
     <section className="feature-section">
@@ -15,32 +28,11 @@ const FeatureSection = () => {
        
 
         <div className="features">
-            <article className=" part1">
-                <i className="fa-regular fa-handshake"></i>
-              <h3>Business Advice</h3>
-              <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit.</p>
-            </article>
-
-            <article className="part2">
-                <i className="fa-regular fa-lightbulb-on"></i>
-              <h3>Startup Business</h3>
-              <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit.</p>
-            </article>
-
-            <article className="part3">
-                <i className="fa-regular fa-chart-mixed"></i>
-              <h3>Finacial Advice</h3>
-              <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit.</p>
-            </article>
-
-            <article className="part4">
-                <i className="fa-regular fa-cube"></i>
-              <h3>Risk Managment</h3>
-              <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit.</p>
-            </article>
-
-            
-
+            {
+              features.map((feature, index) => (
+                <FeatureColumn key={index} position={feature.position} icon={feature.icon} title={feature.title} description={feature.description} />
+              ))
+            }
         </div>
 
     </div>

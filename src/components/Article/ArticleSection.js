@@ -10,6 +10,7 @@ import img_news3 from '../../assets/images/news-Image3.png'
 
 
 const ArticleSection = () => {
+    
   return (
 
     <section className="article-and-news-section">

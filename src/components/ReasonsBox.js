@@ -1,8 +1,14 @@
 import React from 'react'
 
-const ReasonsBox = () => {
+const ReasonsBox = ({ icon, title, description}) => {
   return (
-    <div>ReasonsBox</div>
+    <div className="reasons">
+      <i className={icon}></i>
+      <div>
+        <h3>{title}</h3>
+        <p>{description}</p>
+      </div>
+    </div>
   )
 }
 

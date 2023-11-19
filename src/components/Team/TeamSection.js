@@ -1,12 +1,23 @@
 import React from 'react'
 import SectionTitle from '../../assets/Style/Generics/SectionTitle'
 import Button from '../../assets/Style/Generics/Button'
+import TeamBox from '../TeamBox'
 import img_team1 from '../../assets/images/team-Image1.png'
 import img_team2 from '../../assets/images/team-Image2.png'
 import img_team3 from '../../assets/images/team-Image3.png'
 import img_team4 from '../../assets/images/team-Image4.png'
 
 const TeamSection = () => {
+
+
+    const teams =[
+        {img: img_team1, title: "Kristine Palmer",  description: "Chef Operation Officer" },
+        {img: img_team2, title: "Mark Aubri",  description: "Senior Consultant" },
+        {img: img_team3, title: "Kimberly Hansen",  description: "Senior Consultant" },
+        {img: img_team4, title: "Justin Willoman", description: "Senior Tech Consultant" }
+    ]
+
+
   return (
     <section className="meet-our-team">
         <div className="container">
@@ -18,29 +29,13 @@ const TeamSection = () => {
            
 
             <div className="our-team">
-                <article>
-                    <img src={img_team1} alt="Chef Operation Officer" />
-                    <h3>Kristine Palmer</h3>
-                    <p>Chef Operation Officer</p>
-                </article>
 
-                <article>
-                    <img src={img_team2} alt="Senior Consultant" />
-                    <h3>Mark Aubri</h3>
-                    <p>Senior Consultant</p>
-                </article>
 
-                <article>
-                    <img src={img_team3} alt="Senior Consultant" />
-                    <h3>Kimberly Hansen</h3>
-                    <p>Senior Consultant</p>
-                </article>
-
-                <article>
-                    <img src={img_team4} alt="Senior Tech Consultant" />
-                    <h3>Justin Willoman</h3>
-                    <p>Senior Tech Consultant</p>
-                </article>
+                {
+                    teams.map((team, index) => (
+                        <TeamBox key={index} img={team.img} title={team.title} description={team.description} />
+                    ))
+                }
                     
             </div>
 

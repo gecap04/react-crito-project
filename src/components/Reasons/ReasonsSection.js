@@ -1,8 +1,20 @@
 import React from 'react'
+import ReasonsBox from '../ReasonsBox'
 import SectionTitle from '../../assets/Style/Generics/SectionTitle'
 import img_woman2 from '../../assets/images/woman-image2.png'
 
 const ReasonsSection = () => {
+
+
+    const reasons =[
+        {icon: "fa-light fa-thumbs-up", title: "Process Excellence", description: "Lorem, ipsum dolor sit amet consectetur."},
+        {icon: "fa-light fa-hexagon-check", title: "Strategic Planning", description: "Lorem, ipsum dolor sit amet consectetur."},
+        {icon: "fa-light fa-pen-nib", title: "Experience Design", description: "Lorem, ipsum dolor sit amet consectetur."},
+        {icon: "fa-light fa-head-side-gear", title: "Artificial Inteligence", description: "Lorem, ipsum dolor sit amet consectetur."},
+    ]
+
+
+
   return (
     <section className="reasons-section">
         <div className="container">
@@ -10,40 +22,13 @@ const ReasonsSection = () => {
                 <div className="title">
                     <SectionTitle title="Why Choose Us" description="Why We Are The Best Business Consulting Agency" />
                 </div>
-               
-                <div className="reasons">
-                    <i className="fa-light fa-thumbs-up"></i>
-                    <div>
-                        <h3>Process Excellence</h3>
-                        <p>Lorem, ipsum dolor sit amet consectetur.</p>
-                    </div>
-                </div>
 
-                <div className="reasons">
-                    <i className="fa-light fa-hexagon-check"></i>
-                    <div>
-                        <h3>Strategic Planning</h3>
-                        <p>Lorem, ipsum dolor sit amet consectetur.</p>
-                    </div>
-                </div>
-
-
-                <div className="reasons">
-                    <i className="fa-light fa-pen-nib"></i>
-                    <div>
-                        <h3>Experience Design</h3>
-                        <p>Lorem, ipsum dolor sit amet consectetur.</p>
-                    </div>
-                </div>
-
-
-                <div className="reasons">
-                    <i className="fa-light fa-head-side-gear"></i>
-                    <div>
-                        <h3>Artificial Inteligence</h3>
-                        <p>Lorem, ipsum dolor sit amet consectetur.</p>
-                    </div>
-                </div>
+                {
+                    reasons.map((reason, index) => (
+                        <ReasonsBox key={index} icon={reason.icon} title={reason.title} description={reason.description} />
+                    ))
+                    
+                }
 
 
             </div>

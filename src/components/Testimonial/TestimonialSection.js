@@ -5,8 +5,17 @@ import img_star from '../../assets/images/Star.svg'
 import img_client1 from '../../assets/images/client-Image1.png'
 import img_client2 from '../../assets/images/client-Image2.png'
 import img_client3 from '../../assets/images/client-Image3.png'
+import TestimonialBox from '../TestimonialBox'
 
 const TestimonialSection = () => {
+
+
+    const testimonials =[
+        {imgStar: img_star, comment: "Lorem ipsum dolor, sit amet consectetur adipisicing elit. Laudantium libero, ad dignissimos velit qui, dolorum obcaecati cum saepe nesciunt nemo eligendi numquam voluptate",  imgClient: img_client1, nameTitle: "Cassandra Warren", jobTitle: "Business Manager, Dorfus"},
+        {imgStar: img_star, comment: "Lorem ipsum dolor, sit amet consectetur adipisicing elit. Laudantium libero, ad dignissimos velit qui, dolorum obcaecati cum saepe nesciunt nemo eligendi numquam voluptate",  imgClient: img_client2, nameTitle: "Amanda Tulling", jobTitle: "Senior Developer, Square"},
+        {imgStar: img_star, comment: "Lorem ipsum dolor, sit amet consectetur adipisicing elit. Laudantium libero, ad dignissimos velit qui, dolorum obcaecati cum saepe nesciunt nemo eligendi numquam voluptate",  imgClient: img_client3, nameTitle: "Jack McDogglas", jobTitle: "Key Account Manager, Gobona"},
+    ]
+
   return (
     <section className="testimonial-section">
     <div className="container">
@@ -17,44 +26,11 @@ const TestimonialSection = () => {
             </div>
 
             <div className="ratings">
-                <article>
-                    <img className="stars" src={img_star} alt="five star rating"/>
-                    <p className="comments">"Lorem ipsum dolor, sit amet consectetur adipisicing elit. Laudantium libero, ad dignissimos velit qui, dolorum obcaecati cum saepe nesciunt nemo eligendi numquam voluptate"</p>
-                    <div className="title-alignment">
-                        <img src={img_client1} alt=""/>
-                        <div>
-                            <h3>Cassandra Warren</h3>
-                            <p className="job-title">Business Manager, Dorfus</p>
-                        </div>
-                    </div>
-                </article>
-
-                <article>
-                    <img className="stars" src={img_star} alt="five star rating"/>
-                    <p className="comments">"Lorem ipsum dolor, sit amet consectetur adipisicing elit. Laudantium libero, ad dignissimos velit qui, dolorum obcaecati cum saepe nesciunt nemo eligendi numquam voluptate"</p>
-                    <div className="title-alignment">
-                        <img src={img_client2} alt=""/>
-                        <div>
-                            <h3>Amanda Tulling</h3>
-                            <p className="job-title">Senior Developer, Square</p>
-                        </div>
-                    </div>
-                    
-                </article>
-
-                <article>
-                    <img className="stars" src={img_star} alt="five star rating"/>
-                    <p className="comments">"Lorem ipsum dolor, sit amet consectetur adipisicing elit. Laudantium libero, ad dignissimos velit qui, dolorum obcaecati cum saepe nesciunt nemo eligendi numquam voluptate"</p>
-                    
-                    <div className="title-alignment">
-                        <img src={img_client3} alt=""/>
-                        <div>
-                            <h3>Jack McDogglas</h3>
-                            <p className="job-title">Key Account Manager, Gobona</p>
-                        </div>
-                       
-                    </div>
-                </article>
+            {
+                    testimonials.map((testimonial, index) => (
+                        <TestimonialBox key={index} imgStar={testimonial.imgStar} comment={testimonial.comment} imgClient={testimonial.imgClient} nameTitle={testimonial.nameTitle} jobTitle={testimonial.jobTitle} />
+                    ))
+                }
 
             </div>
 
