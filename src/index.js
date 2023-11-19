@@ -13,6 +13,8 @@ import NotFound from './views/NotFound';
 import HeaderSection from './components/Header/HeaderSection';
 import FooterSection from './components/Footer/FooterSection';
 import FooterSection2 from './components/Footer2/FooterSection2';
+import { ArrticleProvider } from './components/Context/ArticleContext';
+
 
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
@@ -22,16 +24,20 @@ root.render(
     <div className="wrapper">
     <HeaderSection />
     
+    <ArrticleProvider>
+        <Routes>
+          
+            <Route path='/' element={<Home />} />
+            <Route path='/contacts' element={<Contacts />} />
+            
+              <Route path='/news' element={<News />} />
+              <Route path='/articles/:id' element={<NewsDetails />} />
+              
+            <Route path='*' element={<NotFound/>} />
+          
 
-      <Routes>
-        <Route path='/' element={<Home />} />
-        <Route path='/contacts' element={<Contacts />} />
-        <Route path='/news' element={<News />} />
-        <Route path='/details' element={<NewsDetails />} />
-        <Route path='*' element={<NotFound/>} />
-
-      </Routes>
-
+        </Routes>
+      </ArrticleProvider>
     <FooterSection />
     <FooterSection2 />
     </div>

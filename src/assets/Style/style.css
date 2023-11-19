@@ -1605,6 +1605,10 @@ header .container .menu .main-menu .btn-login {
   padding-top: 40px;
 }
 
+.article-item {
+  margin-bottom: 20px;
+}
+
 * {
   box-sizing: border-box;
 }
